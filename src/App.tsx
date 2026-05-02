@@ -159,208 +159,135 @@ const EXPERIENCE_LOGOS = [
 
 const BLOG_POSTS = [
   {
-    id: 'obligados-contabilidad',
-    title: '¿Quiénes están obligados a llevar contabilidad en Colombia?',
-    summary: 'Descubra si su actividad mercantil o fiscal le obliga a llevar libros de contabilidad regular conforme a la ley colombiana.',
-    icon: FileText,
-    color: 'sky',
-    content: `
-      <div className="space-y-6 text-slate-800 leading-relaxed text-justify">
-        <p className="font-bold text-lg text-brand-900">En Colombia existen normas que regulan la obligación de llevar Contabilidad en materia mercantil y normas que regulan el mismo asunto desde el punto de vista fiscal.</p>
-        
-        <section>
-          <h3 className="text-xl font-bold text-slate-900 mb-4 border-b-2 border-brand-100 pb-2">I. Normas que regulan la obligación de llevar Contabilidad en materia comercial</h3>
-          <p className="mb-4">En materia mercantil, todos los comerciantes están obligados a llevar Contabilidad, tal como lo prescribe el artículo 19, numeral 3 del Código de Comercio: <span className="italic">"Es obligación de todo comerciante … llevar contabilidad regular de sus negocios conforme a las prescripciones legales".</span></p>
-          
-          <p className="mb-4">Por su parte el articulo 20 numerales del 1 al 19 define los actos, operaciones y empresas mercantiles, entre los que se destacan:</p>
-          <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li>La adquisición de bienes a título oneroso con destino a enajenarlos.</li>
-            <li>El recibo de dinero en mutuo a interés.</li>
-            <li>Las operaciones bancarias y de bolsas.</li>
-            <li>Las empresas de transporte, fabricación, transformación y prestación de servicios.</li>
-            <li>Las empresas editoriales, litográficas y de propaganda.</li>
-          </ul>
-          <p className="mb-4">El artículo 25 del referido código establece que una <strong>empresa</strong> es toda actividad económica organizada para la producción, transformación, circulación, administración, o custodia de bienes, o para la prestación de servicios.</p>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-bold text-slate-900 mb-4 border-b-2 border-brand-100 pb-2">II. Normas que regulan la obligación desde el punto de vista fiscal</h3>
-          <p className="mb-4">El artículo 772 del Estatuto Tributario (ET) señala que los libros de contabilidad, siempre que se lleven en debida forma, constituyen prueba a favor del contribuyente.</p>
-          <p className="mb-4">Sin embargo, para efectos fiscales <strong>no están obligados a llevar contabilidad</strong> las personas no responsables del IVA. A estas personas le asiste la obligación de llevar un <strong>libro fiscal</strong> de registro de operaciones diarias (Art. 616 ET).</p>
-          
-          <div className="bg-amber-50 p-4 rounded-xl border border-amber-200 mb-4">
-            <h4 className="font-bold text-amber-800 mb-2">Requisitos para ser responsable de IVA (Año 2021/2026):</h4>
-            <p className="text-sm mb-2">Usted deja de ser "No Responsable" si cumple con alguno de estos puntos:</p>
-            <ul className="list-decimal pl-6 space-y-1 text-sm">
-              <li>Ingresos brutos anuales superiores a 3.500 UVT.</li>
-              <li>Tener más de un establecimiento de comercio o sede.</li>
-              <li>Desarrollar actividades bajo franquicia o regalías.</li>
-              <li>Ser usuario aduanero.</li>
-              <li>Consignaciones bancarias superiores a 3.500 UVT.</li>
-              <li>Estar registrado en el Régimen Simple de Tributación.</li>
-            </ul>
-          </div>
-          
-          <p>Una vez el contribuyente es responsable del IVA, debe inscribirse en el RUT, llevar contabilidad, expedir factura, recaudar y pagar el IVA a la DIAN, y cumplir con todas las obligaciones tributarias vigentes.</p>
-        </section>
-
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-          <p className="font-bold text-brand-900">OSCAR DARÍO RAMÍREZ VALENCIA</p>
-          <p className="text-sm text-slate-500">Contador Público</p>
-        </div>
-      </div>
-    `
-  },
-  {
-    id: 'pasos-calendario-obligaciones',
-    title: 'Siete (7) pasos para elaborar el calendario de obligaciones a cargo de su entidad',
-    summary: 'Guía práctica para organizar y cumplir a tiempo con las obligaciones tributarias y contables de su organización.',
-    icon: Calendar,
-    color: 'emerald',
-    content: `
-      <div className="space-y-6 text-slate-800 leading-relaxed text-justify">
-        <p className="font-bold text-lg text-brand-900">Organizar las obligaciones de su entidad no tiene por qué ser un reto. Siga estos 7 pasos estratégicos para mantener su cumplimiento al día:</p>
-        
-        <div className="grid grid-cols-1 gap-4">
-          {[
-            { step: 1, text: "Elaborar una lista de las obligaciones formales y sustanciales en materia tributaria y de informes contables, financieros y de cumplimiento." },
-            { step: 2, text: "Identificar las entidades territoriales, órganos colegiados y destinatarios a los cuales su entidad deben presentar las obligaciones e informes." },
-            { step: 3, text: "Asignar las fechas de elaboración, de revisión y de presentación. La fecha de presentación debe ser por lo menos un (1) día antes de la fecha límite establecida." },
-            { step: 4, text: "Socializar el calendario con las personas responsables de la elaboración, revisión y presentación de los informes." },
-            { step: 5, text: "Incorporar en el calendario las observaciones realizadas por las personas responsables de cada proceso." },
-            { step: 6, text: "Hacer seguimiento a novedades de cambios de fechas o nuevas obligaciones e incorporarlas inmediatamente." },
-            { step: 7, text: "Verificar el cumplimiento de preparación, revisión y presentación conforme con los plazos establecidos en su calendario interno." }
-          ].map((item) => (
-            <div key={item.step} className="flex gap-4 p-4 bg-slate-50 rounded-2xl border border-slate-100 items-start">
-              <span className="bg-brand-900 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0 text-sm">
-                {item.step}
-              </span>
-              <p className="text-slate-700 font-medium">{item.text}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-          <p className="font-bold text-brand-900">OSCAR DARÍO RAMÍREZ VALENCIA</p>
-          <p className="text-sm text-slate-500">Contador Público</p>
-        </div>
-      </div>
-    `
-  },
-  {
     id: 'errores-empresarios-contabilidad',
-    title: '7 Errores de los Empresarios relacionados con la Contabilidad',
-    summary: 'Identifique las fallas más comunes al no considerar la contabilidad como una actividad inherente al negocio y cómo evitarlas.',
+    title: '7 errores que pueden hacerte pagar multas sin darte cuenta',
+    summary: '',
     icon: AlertTriangle,
     color: 'rose',
     content: `
-      <div className="space-y-6 text-slate-800 leading-relaxed text-justify">
-        <p className="font-bold text-lg text-brand-900">Muchos empresarios y emprendedores ven la contabilidad como una obligación externa, cuando en realidad es el motor de decisión de su negocio. Estos son los errores más críticos:</p>
+      <div class="space-y-6 text-slate-800 leading-relaxed text-justify">
+        <p class="font-bold text-lg text-brand-900">Muchos empresarios ven la contabilidad como una obligación externa, cuando en realidad es el motor de decisión de su negocio. Estos son los errores más críticos:</p>
         
-        <div className="space-y-4">
-          {[
-            { step: 1, title: "Toma de decisiones subjetivas", desc: "Decidir basándose en percepciones y no en datos reales sobre la evolución económica." },
-            { step: 2, title: "Proyecciones poco confiables", desc: "Falta de información financiera sólida para planear el futuro del negocio." },
-            { step: 3, title: "Riesgos de sanciones", desc: "Posibles emplazamientos de la DIAN por falta de claridad en las declaraciones o registros." },
-            { step: 4, title: "Falta de control operativo", desc: "Dificultad para optimizar recursos y minimizar gastos al no tener un seguimiento riguroso." },
-            { step: 5, title: "Sin fuerza probatoria", desc: "Carencia de pruebas fidedignas ante terceros o entidades jurídicas en situaciones legales." },
-            { step: 6, title: "Incertidumbre de resultados", desc: "Desconocer si el negocio está generando utilidad o pérdida real al finalizar el ciclo." },
-            { step: 7, title: "Información desactualizada", desc: "Conocimiento nulo o poco confiable en tiempo real de la situación financiera del negocio." }
-          ].map((item) => (
-            <div key={item.step} className="flex gap-4 p-5 bg-red-50/30 rounded-2xl border border-red-100 items-start">
-              <span className="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">
-                {item.step}
-              </span>
-              <div>
-                <p className="text-slate-900 font-bold mb-1">{item.title}</p>
-                <p className="text-slate-700 text-sm">{item.desc}</p>
-              </div>
+        <div class="space-y-4">
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">1</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Toma de decisiones subjetivas</p>
+              <p class="text-slate-700 text-sm">Decidir basándose en percepciones y no en datos reales sobre la evolución económica.</p>
             </div>
-          ))}
+          </div>
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">2</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Proyecciones poco confiables</p>
+              <p class="text-slate-700 text-sm">Falta de información financiera sólida para planear el futuro del negocio.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">3</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Riesgos de sanciones</p>
+              <p class="text-slate-700 text-sm">Posibles emplazamientos de la DIAN por falta de claridad en las declaraciones o registros.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">4</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Falta de control operativo</p>
+              <p class="text-slate-700 text-sm">Dificultad para optimizar recursos y minimizar gastos al no tener un seguimiento riguroso.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">5</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Sin fuerza probatoria</p>
+              <p class="text-slate-700 text-sm">Carencia de pruebas fidedignas ante terceros o entidades jurídicas en situaciones legales.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">6</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Incertidumbre de resultados</p>
+              <p class="text-slate-700 text-sm">Desconocer si el negocio está generando utilidad o pérdida real al finalizar el ciclo.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-5 bg-red-50/50 rounded-2xl border border-red-100 items-start">
+            <span class="bg-red-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold shrink-0 text-xs mt-0.5">7</span>
+            <div>
+              <p class="text-slate-900 font-bold mb-1">Información desactualizada</p>
+              <p class="text-slate-700 text-sm">Conocimiento nulo o poco confiable en tiempo real de la situación financiera del negocio.</p>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-brand-50 p-6 rounded-3xl border border-brand-100 mt-8">
-          <p className="text-brand-900 font-medium italic text-center">
+        <div class="bg-brand-50 p-6 rounded-3xl border border-brand-100 mt-8">
+          <p class="text-brand-900 font-medium italic text-center">
             "La contabilidad no es un gasto, es el mapa que le indica si su barco va directo a puerto o hacia un arrecife."
           </p>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-          <p className="font-bold text-brand-900">OSCAR DARÍO RAMÍREZ VALENCIA</p>
-          <p className="text-sm text-slate-500">Contador Público</p>
         </div>
       </div>
     `
   },
   {
     id: 'hechos-perdida-negocio',
-    title: 'Siete (7) hechos que advierten que su negocio genera pérdida',
-    summary: 'Aprenda a identificar las señales críticas que indican que su empresa está perdiendo rentabilidad antes de que sea tarde.',
+    title: '7 señales de que estás perdiendo dinero sin darte cuenta',
+    summary: '',
     icon: ShieldAlert,
     color: 'amber',
     content: `
-      <div className="space-y-6 text-slate-800 leading-relaxed text-justify">
-        <p className="font-bold text-lg text-brand-900">Detectar a tiempo que un negocio no es rentable es la diferencia entre el cierre y la quiebra. Estas señales son advertencias directas:</p>
+      <div class="space-y-6 text-slate-800 leading-relaxed text-justify">
+        <p class="font-bold text-lg text-brand-900">Detectar a tiempo que un negocio no es rentable es la diferencia entre el cierre y la quiebra. Estas señales son advertencias directas:</p>
         
-        <div className="grid grid-cols-1 gap-4">
-          {[
-            { step: 1, text: "Gastos superiores al precio de venta: Cuando producir o prestar el servicio cuesta más de lo que se cobra." },
-            { step: 2, text: "Descuentos excesivos: Cuando los descuentos por volumen superan el ahorro por producción en serie." },
-            { step: 3, text: "Financiación no reconocida: Pagos tardíos de clientes sin pactar intereses por el tiempo de espera." },
-            { step: 4, text: "Cuentas incobrables: Falta de gestión de cobro que obliga a castigar cartera de difícil recaudo." },
-            { step: 5, text: "Omisión de costos indirectos: Cuando el precio solo cubre costos directos, ignorando gastos administrativos y de ventas." },
-            { step: 6, text: "Disminución de ventas: Una caída progresiva y constante en el volumen de negocio." },
-            { step: 7, text: "Márgenes mínimos: Rentabilidad tan baja que no permite el crecimiento o la reinversión." }
-          ].map((item) => (
-            <div key={item.step} className="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
-              <span className="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">
-                {item.step}
-              </span>
-              <p className="text-slate-700 font-medium">{item.text}</p>
+        <div class="grid grid-cols-1 gap-4">
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">1</span>
+            <div>
+              <p class="text-slate-700 font-bold">Gastos superiores al precio de venta:</p>
+              <p class="text-slate-600">Cuando producir o prestar el servicio cuesta más de lo que se cobra.</p>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-          <p className="font-bold text-brand-900">OSCAR DARÍO RAMÍREZ VALENCIA</p>
-          <p className="text-sm text-slate-500">Contador Público</p>
-        </div>
-      </div>
-    `
-  },
-  {
-    id: 'beneficios-presupuesto-ejecucion',
-    title: 'Siete (7) beneficios del presupuesto y su ejecución',
-    summary: 'Descubra por qué el presupuesto es la herramienta definitiva para planear el futuro financiero y asegurar la liquidez de su entidad.',
-    icon: Rocket,
-    color: 'indigo',
-    content: `
-      <div className="space-y-6 text-slate-800 leading-relaxed text-justify">
-        <p className="font-bold text-lg text-brand-900">El presupuesto no es solo una hoja de cálculo; es la hoja de ruta estratégica para el éxito financiero de su organización:</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            { step: 1, title: "Planeación Anticipada", text: "Planeación general de ingresos y egresos en un periodo determinado." },
-            { step: 2, title: "Detalle de Recursos", text: "Información puntual sobre obtención y uso de recursos en costos y gastos." },
-            { step: 3, title: "Seguimiento y Control", text: "Proporciona los datos necesarios para auditar las operaciones de la entidad." },
-            { step: 4, title: "Decisiones Oportunas", text: "Permite ajustar la estrategia según los ingresos reales percibidos vs proyectados." },
-            { step: 5, title: "Ahorro e Inversión", text: "Facilita la planificación del excedente para futuras inversiones estratégicas." },
-            { step: 6, title: "Evaluación de Gestión", text: "Identifica deficiencias en la administración de los recursos para su corrección." },
-            { step: 7, title: "Control de Liquidez", text: "Ayuda a tomar decisiones críticas para mantener la salud de caja de la entidad." }
-          ].map((item) => (
-            <div key={item.step} className="p-4 bg-brand-50/30 rounded-2xl border border-brand-100/50">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-brand-900 font-black text-xs">0{item.step}</span>
-                <p className="font-bold text-slate-900 text-sm">{item.title}</p>
-              </div>
-              <p className="text-slate-600 text-xs leading-relaxed">{item.text}</p>
+          </div>
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">2</span>
+            <div>
+              <p class="text-slate-700 font-bold">Descuentos excesivos:</p>
+              <p class="text-slate-600">Cuando los descuentos por volumen superan el ahorro por producción en serie.</p>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
-          <p className="font-bold text-brand-900">OSCAR DARÍO RAMÍREZ VALENCIA</p>
-          <p className="text-sm text-slate-500">Contador Público</p>
+          </div>
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">3</span>
+            <div>
+              <p class="text-slate-700 font-bold">Financiación no reconocida:</p>
+              <p class="text-slate-600">Pagos tardíos de clientes sin pactar intereses por el tiempo de espera.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">4</span>
+            <div>
+              <p class="text-slate-700 font-bold">Cuentas incobrables:</p>
+              <p class="text-slate-600">Falta de gestión de cobro que obliga a castigar cartera de difícil recaudo.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">5</span>
+            <div>
+              <p class="text-slate-700 font-bold">Omisión de costos indirectos:</p>
+              <p class="text-slate-600">Cuando el precio solo cubre costos directos, ignorando gastos administrativos y de ventas.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">6</span>
+            <div>
+              <p class="text-slate-700 font-bold">Disminución de ventas:</p>
+              <p class="text-slate-600">Una caída progresiva y constante en el volumen de negocio.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 p-4 bg-orange-50/50 rounded-2xl border border-orange-100 items-start">
+            <span class="bg-orange-600 text-white w-7 h-7 rounded-lg flex items-center justify-center font-bold shrink-0 text-xs">7</span>
+            <div>
+              <p class="text-slate-700 font-bold">Márgenes mínimos:</p>
+              <p class="text-slate-600">Rentabilidad tan baja que no permite el crecimiento o la reinversión.</p>
+            </div>
+          </div>
         </div>
       </div>
     `
@@ -395,25 +322,46 @@ export default function App() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[32px] shadow-2xl relative p-6 md:p-12"
+              className="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[32px] shadow-2xl relative p-8 md:p-20 custom-scrollbar"
             >
               <button 
                 onClick={() => setActiveArticle(null)}
-                className="absolute top-6 right-6 p-2 hover:bg-slate-100 rounded-full transition-colors"
+                className="absolute top-8 right-8 p-3 hover:bg-slate-100 rounded-full transition-colors z-10"
               >
-                <X size={24} />
+                <X size={24} strokeWidth={3} />
               </button>
               
-              <div className="mb-8">
-                <div className="bg-brand-50 w-fit p-3 rounded-2xl mb-4 text-brand-900">
-                  <activeArticle.icon size={32} />
+              <div className="max-w-2xl mx-auto">
+                <div className="mb-12">
+                  <div className="bg-brand-50 w-fit p-4 rounded-2xl mb-6 text-brand-900 border border-brand-100">
+                    <activeArticle.icon size={40} />
+                  </div>
+                  <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight">
+                    {activeArticle.title}
+                  </h2>
+                  <div className="h-1.5 w-24 bg-brand-900 rounded-full mb-8"></div>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-                  {activeArticle.title}
-                </h2>
+                
+                <div className="article-content" dangerouslySetInnerHTML={{ __html: activeArticle.content }} />
+                
+                <div className="mt-16 pt-8 border-t border-slate-200">
+                  <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="text-center md:text-left">
+                      <p className="text-slate-400 font-bold uppercase text-[10px] tracking-widest mb-1">Autor del artículo</p>
+                      <p className="text-brand-900 font-black text-lg">Oscar Darío Ramírez Valencia</p>
+                      <p className="text-slate-500 font-bold text-sm">Contador Público Especialista en Revisoría Fiscal</p>
+                    </div>
+                    <a 
+                      href="https://wa.me/573113355169" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-brand-900 text-white px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-black transition-all shadow-xl flex items-center gap-2"
+                    >
+                      Solicitar Asesoría Directa
+                    </a>
+                  </div>
+                </div>
               </div>
-              
-              <div dangerouslySetInnerHTML={{ __html: activeArticle.content }} />
             </motion.div>
           </motion.div>
         )}
@@ -516,7 +464,7 @@ export default function App() {
                 className="bg-brand-900 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-brand-950 transition-all shadow-sm flex items-center gap-2"
               >
                 <Phone size={16} />
-                Coordinar Cita
+                Hablemos de tu caso
               </a>
             </div>
           </div>
@@ -653,7 +601,7 @@ export default function App() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <div>
                       <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight max-w-xl">
-                        Tus números pueden estar ocultando errores que te están costando dinero ahora mismo; mi <span className="text-brand-900">asesoría los transforma en decisiones</span> que impulsan tu negocio.
+                        Tu contabilidad puede estar ocultando errores que ya te están costando dinero… y ni siquiera lo sabes. <span className="text-brand-900">Yo los convierto en decisiones</span> que protegen y hacen crecer tu negocio.
                       </h2>
                       <p className="text-slate-800 font-medium mb-8 leading-relaxed text-justify">
                         Muchos creen que su contabilidad está bien… hasta que aparece una multa o una pérdida que no vieron venir. <br/><br/>
@@ -663,7 +611,6 @@ export default function App() {
                     <div className="relative">
                       <div className="absolute -inset-4 bg-brand-900/5 rounded-3xl -z-10 blur-2xl" />
                       <div className="bg-white p-8 md:p-10 rounded-[32px] border border-slate-200 shadow-sm">
-                        <h3 className="text-brand-900 font-bold uppercase tracking-wider text-sm mb-8">Nuestra Promesa de Valor</h3>
                         <div className="space-y-8">
                           {[
                             { 
@@ -718,11 +665,11 @@ export default function App() {
               <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Actualidad y Consejos Estratégicos</h2>
-                    <p className="text-slate-900 font-bold max-w-2xl mx-auto text-lg leading-relaxed italic">Manténgase informado sobre la normativa contable y fiscal para tomar las mejores decisiones en su negocio.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Errores que pueden estar costándote dinero ahora mismo</h2>
+                    <p className="text-slate-900 font-bold max-w-2xl mx-auto text-lg leading-relaxed italic">Si no los detectas a tiempo, los pagas después.</p>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {BLOG_POSTS.map((post) => (
                       <motion.div
                         key={post.id}
@@ -744,7 +691,7 @@ export default function App() {
                           {post.summary}
                         </p>
                         <div className="flex items-center gap-3 text-brand-900 font-black text-xs uppercase tracking-widest pt-6 border-t border-slate-200/50">
-                          <span>Leer artículo completo</span>
+                          <span>VER DÓNDE ESTOY PERDIENDO DINERO</span>
                           <TrendingUp size={16} className="group-hover:translate-x-1 transition-transform" />
                         </div>
                       </motion.div>
@@ -758,7 +705,7 @@ export default function App() {
               {/* CTA Section */}
               <section className="py-20 bg-brand-900 text-white text-center">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-8">Coordinemos una cita</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-8">Hablemos de tu caso</h2>
                   <a 
                     href="https://wa.me/573113355169" 
                     target="_blank" 
@@ -766,7 +713,7 @@ export default function App() {
                     className="inline-flex items-center gap-2 bg-white text-brand-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl"
                   >
                     <Phone size={20} />
-                    Agendar por WhatsApp
+                    Hablar por WhatsApp
                   </a>
                 </div>
               </section>
