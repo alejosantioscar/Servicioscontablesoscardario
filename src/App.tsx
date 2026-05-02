@@ -86,10 +86,26 @@ interface Service {
 }
 
 const SERVICES: Service[] = [
-  { title: 'Asesoría Financiera', description: 'Gestión integral de libros oficiales, reportes financieros y Estados Financieros', icon: Calculator },
-  { title: 'Revisoría Fiscal', description: 'Control y vigilancia para el cumplimiento legal.', icon: ShieldCheck },
-  { title: 'Auditoría', description: 'Examen crítico y sistemático de sus finanzas.', icon: Search },
-  { title: 'Gestión Tributaria', description: 'Optimización y cumplimiento de obligaciones fiscales.', icon: FileText },
+  { 
+    title: 'Asesoría Financiera', 
+    description: 'Gestión integral de registros, reportes y estados financieros para proteger la salud de tu negocio.', 
+    icon: Calculator 
+  },
+  { 
+    title: 'Revisoría Fiscal', 
+    description: 'Control y vigilancia para el cumplimiento legal absoluto y blindaje total ante la DIAN.', 
+    icon: ShieldCheck 
+  },
+  { 
+    title: 'Auditoría', 
+    description: 'Examen crítico y sistemático de tus finanzas para detectar fugas de dinero y sobrecostos.', 
+    icon: Search 
+  },
+  { 
+    title: 'Gestión Tributaria', 
+    description: 'Optimización de obligaciones fiscales para transformar impuestos en estrategias de crecimiento.', 
+    icon: FileText 
+  },
 ];
 
 const INTERACTIVE_TOOLS = [
@@ -225,6 +241,18 @@ const BLOG_POSTS = [
             "La contabilidad no es un gasto, es el mapa que le indica si su barco va directo a puerto o hacia un arrecife."
           </p>
         </div>
+
+        <div class="mt-12 p-8 bg-brand-900 text-white rounded-[32px] text-center shadow-2xl border-4 border-white">
+          <p class="text-xl font-bold mb-6 italic leading-tight">
+            👉 “Si viste 2 o más errores… ya estás perdiendo dinero. Revísalo ahora con el diagnóstico gratis.”
+          </p>
+          <button 
+            data-tool="🚨 Escáner de Multas Laborales"
+            class="cta-tool-trigger bg-white text-brand-900 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-slate-100 transition-all flex items-center gap-2 mx-auto shadow-lg"
+          >
+            Realizar Diagnóstico Gratis
+          </button>
+        </div>
       </div>
     `
   },
@@ -289,6 +317,18 @@ const BLOG_POSTS = [
             </div>
           </div>
         </div>
+
+        <div class="mt-12 p-8 bg-brand-900 text-white rounded-[32px] text-center shadow-2xl border-4 border-white">
+          <p class="text-xl font-bold mb-6 italic leading-tight">
+            👉 “Si viste 2 o más errores… ya estás perdiendo dinero. Revísalo ahora con el diagnóstico gratis.”
+          </p>
+          <button 
+            data-tool="💰 Calcula el costo real de tu nómina y detecta sobrecostos ocultos"
+            class="cta-tool-trigger bg-white text-brand-900 px-8 py-4 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-slate-100 transition-all flex items-center gap-2 mx-auto shadow-lg"
+          >
+            Ver Dónde Estoy Perdiendo Dinero
+          </button>
+        </div>
       </div>
     `
   }
@@ -305,6 +345,18 @@ const BLOG_COLORS: Record<string, string> = {
 export default function App() {
   const [activeTool, setActiveTool] = useState<string | null>(null);
   const [activeArticle, setActiveArticle] = useState<typeof BLOG_POSTS[0] | null>(null);
+
+  const handleArticleContentClick = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    const trigger = target.closest('.cta-tool-trigger') as HTMLButtonElement;
+    if (trigger) {
+      const toolName = trigger.getAttribute('data-tool');
+      if (toolName) {
+        setActiveArticle(null);
+        setActiveTool(toolName);
+      }
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-blue-50">
@@ -342,7 +394,7 @@ export default function App() {
                   <div className="h-1.5 w-24 bg-brand-900 rounded-full mb-8"></div>
                 </div>
                 
-                <div className="article-content" dangerouslySetInnerHTML={{ __html: activeArticle.content }} />
+                <div className="article-content" onClick={handleArticleContentClick} dangerouslySetInnerHTML={{ __html: activeArticle.content }} />
                 
                 <div className="mt-16 pt-8 border-t border-slate-200">
                   <div className="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -604,8 +656,8 @@ export default function App() {
                         Tu contabilidad puede estar ocultando errores que ya te están costando dinero… y ni siquiera lo sabes. <span className="text-brand-900">Yo los convierto en decisiones</span> que protegen y hacen crecer tu negocio.
                       </h2>
                       <p className="text-slate-800 font-medium mb-8 leading-relaxed text-justify">
-                        Muchos creen que su contabilidad está bien… hasta que aparece una multa o una pérdida que no vieron venir. <br/><br/>
-                        Aquí detectamos lo que te puede salir caro antes de que pase.
+                        La mayoría cree que “todo está bien”… hasta que la DIAN les cobra lo que no vieron venir. <br/><br/>
+                        Aquí detectas en minutos lo que hoy mismo te puede costar dinero — antes de que te lo cobren.
                       </p>
                     </div>
                     <div className="relative">
@@ -647,14 +699,17 @@ export default function App() {
               <section id="servicios" className="py-24 bg-slate-900 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+                    <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tight">Lo que hago por tu empresa</h2>
+                    <p className="text-slate-400 text-lg">Mi compromiso es proteger cada peso de tu negocio.</p>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {SERVICES.map((service, index) => (
-                      <div key={index} className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700 hover:bg-slate-800 transition-colors flex flex-col items-center text-center">
-                        <service.icon className="text-brand-400 mb-4" size={32} />
-                        <h4 className="text-lg font-bold mb-2">{service.title}</h4>
-                        <p className="text-slate-400 text-sm">{service.description}</p>
+                      <div key={index} className="p-8 rounded-[32px] bg-slate-800/30 border border-slate-700/50 hover:border-brand-500/50 hover:bg-slate-800 transition-all group flex flex-col items-center text-center h-full">
+                        <div className="mb-6 p-4 bg-slate-700/30 rounded-2xl group-hover:scale-110 transition-transform text-brand-400">
+                          <service.icon size={44} />
+                        </div>
+                        <h4 className="text-2xl font-black mb-4 leading-tight group-hover:text-brand-400 transition-colors">{service.title}</h4>
+                        <p className="text-slate-400 text-sm leading-relaxed">{service.description}</p>
                       </div>
                     ))}
                   </div>
